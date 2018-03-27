@@ -1,0 +1,121 @@
+/*
+ 学生页面样式表
+ */
+.header{
+  position: relative;
+}
+.body{
+  background-color: #ccc;
+}
+.back{
+  display: block;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding:.45rem;
+  color: #fff !important;
+}
+.content{
+  margin: 0;
+}
+.back img{
+  height: .6rem;
+  width: .6rem;
+}
+.user-select{
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: .2rem;
+  height: 1.5rem;
+  width: 8rem;
+  margin: 1rem auto;
+  font-size: .7rem;
+  line-height: 1.4rem;
+}
+.score-list{
+  width: 100%;
+}
+.score-list>li{
+  height: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+.score-list>li>ul{
+  display: flex;
+  width: 100%;
+}
+.score-list>li>ul>li{
+  flex: 1;
+  border-left: 1px solid #ddd;
+  text-indent: 1rem;
+  font-size: .5rem;
+  line-height: 1rem;
+}
+
+
+/* 个人信息 */
+.head{
+  position: relative;
+  height: 6rem;
+  width: 10rem;
+  margin-top: -2px;
+  background-color: #87CEFA;
+}
+.head-img{
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-name{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: .6rem;
+  color: #fff;
+}
+.detail-info{
+  margin-top:.3rem;
+  background-color: #fff;
+}
+.detail-info>li{
+  height: 1.2rem;
+}
+.detail-info>li>a{
+  display: block;
+  position: relative;
+  padding: 0 1rem;
+  height: 1.2rem;
+  line-height: .85rem;
+  border-bottom: 1px solid #ccc;
+}
+.detail-info>li>a>span{
+  display: inline-block;
+  float: left;
+  min-width: 2rem;
+  height: 1.2rem;
+  font-size: .5rem;
+  line-height: 1.2rem;
+}
+.detail-info>li>a>p{
+  display: inline-block;
+  color: #999;
+  float: right;
+  height: 1.2rem;
+  font-size: .5rem;
+  line-height: 1.2rem;
+}
+.detail-info>li>a::after{
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  content: url(../img/more.png);
+  position: absolute;
+  right: 0;
+  top: .15rem;
+}

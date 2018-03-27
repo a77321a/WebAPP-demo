@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<meta name="apple-touch-fullscreen" content="yes"/><!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/><!-- 设置苹果工具栏颜色:默认值为 default，可以定为 black和 black-translucent-->
+	<meta http-equiv="Cache-Control" content="no-siteapp" /><!-- 不让百度转码 -->
+	<meta name="HandheldFriendly" content="true"><!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="MobileOptimized" content="320"><!-- 微软的老式浏览器 -->
+	<meta name="screen-orientation" content="portrait"><!-- 强制竖屏 -->
+	<meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+	<meta name="browsermode" content="application"><!-- UC应用模式 -->
+	<meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
+	<meta name="msapplication-tap-highlight" content="no"><!-- windows phone 点击无高光 -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="css/student.css">
+  <link rel="stylesheet" href="css/mobileSelect.css">
+	<title>主页</title>
+</head>
+<body>
+   <div class="header">
+     <!-- <a href="javascript:history.back(-1)" class="back">
+       <img src="img/back.png" alt="返回">
+     </a> -->
+     <div>成 绩</div>
+   </div>
+   <div class="content">
+     <div class="user-select">
+        <div id="trigger2">请选择学期</div>
+     </div>
+     <div class="table">
+       <ul class="score-list">
+         <li>
+           <ul>
+             <li>数学</li>
+             <li>25</li>
+           </ul>
+         </li>
+         <li>
+           <ul>
+             <li>语文</li>
+             <li>30</li>
+           </ul>
+         </li>
+         <li>
+           <ul>
+             <li>英语</li>
+             <li>40</li>
+           </ul>
+         </li>
+         <li>
+           <ul>
+             <li>化学</li>
+             <li>60</li>
+           </ul>
+         </li>
+       </ul>
+     </div>
+   </div>
+
+
+   <!-- 脚部 -->
+ 	<div class="footer">
+ 			<a href="/">首页</a>
+ 			<a href="javascript:void(0);">成绩</a>
+ 			<a href="user-info.html">我</a>
+ 	</div>
+
+
+   <script src="../lib/jquery.min.js"></script>
+   <script src="../js/common.js"></script>
+  <script src="js/mobileSelect.js" charset="utf-8"></script>
+  <script type="text/javascript">
+
+      var parArr = ['2014-2015', '2015-2016', '2016-2017', '2017-2018'];
+      var numArr = ['1','2'];
+      var mobileSelect2 = new MobileSelect({
+                  trigger: '#trigger2',
+                  title: '选择学期',
+                  wheels: [
+                      {data: parArr},
+                      {data: numArr}
+                  ],
+                  position: [1, 2]
+              });
+  </script>
+	<script type="text/javascript">
+		$(function(){
+			var name='xxx';
+			$.get('/score/du?'+name,function(data,status){
+				console.log(data);
+			});
+		});
+	</script>
+</body>
+</html>

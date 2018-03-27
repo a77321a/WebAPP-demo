@@ -1,0 +1,96 @@
+@charset "utf-8";
+.body{
+    width: 100%;
+    height: 100%;
+    /* background: url(../../img/login-bg.png) no-repeat;
+    background-size:cover; */
+}
+.header{
+    padding-top: .5rem;
+    height: 1.5rem;
+    width: 10rem;
+}
+.header p{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5rem;
+    color: #000;
+    font-size: .7rem;
+    font-weight: 300;
+}
+.content{
+    margin-top:3.5rem;
+}
+.content input{
+  font-size: .35rem;
+    margin: 1rem auto;
+    display: block;
+    width: 6.5rem;
+    height: 1rem;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    color: #000;
+}
+.content .btn-login{
+  background-color: #AEEEEE;
+}
+.content .btn-reg{
+  background-color: #AEEEEE;
+}
+.content span.reg{
+  font-size: .5rem;
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #4169E1;
+}
+.reg a{
+  text-decoration: none !important;
+}
+input[type=text],input[type=password]{
+    text-indent: 1rem;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000; opacity:1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000;opacity:1;
+}
+
+input:-ms-input-placeholder{
+    color: #000;opacity:1;
+}
+
+input::-webkit-input-placeholder{
+    color: #000;opacity:1;
+}
+input{
+    background-color: rgba(255,255,255,0.2);
+}
+.btn-login,.btn-reg{
+    text-align: center;
+    color: #588885;
+}
+.content p{
+    font-size: .5rem;
+    text-align: center;
+    color: #000;
+}
+
+.mask{
+  display: none;
+  text-align: center;
+  position: fixed;
+  width: 6rem;
+  height: 2rem;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0,0,0,0.4);
+  font-size: .5rem;
+  color: #fff;
+  line-height: 2rem;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign in</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="./css/entry.css">
+</head>
+<body>
+<div class="body">
+	<div class="header">
+		<p>注 册</p>
+	</div>
+	<div class="content">
+		<form class="fomr-login" action="/checkreg" method="post">
+    <input id="username" name="username" type="text" placeholder="请输入用户名"/>
+		<input id="password" name="password" type="password" placeholder="请输入密码"/>
+		<input type="submit" class="btn-reg" value="注 册"/>
+	</form>
+		<p>或者</p>
+	<span class="reg">	<a href="/login">>>已有帐号，直接登录</a></span>
+	</div>
+</div>
+<!-- 提示框 -->
+<div class="mask"></div>
+
+	<script src="/lib/jquery.min.js"></script>
+	<script src="/js/common.js"></script>
+	<script type="text/javascript">
+			$('#username').blur(function(){
+				var username = $('#username').val();
+				$.post('/checkusername',{"username":username},function(data,status){
+					console.log(data);
+						if(data.state!=1){
+							$('.mask').html('用户名已存在');
+							$('.mask').fadeIn();
+							$('.mask').fadeOut(3000);
+						}
+				});
+			});
+			$('.btn-reg').click(function(){
+				var username = $('#username').val();
+				var password = $('#password').val();
+				if(username==""||password==""){
+					alert('111');
+					return false;
+				}
+			});
+	</script>
+</body>
+</html>
